@@ -2,9 +2,9 @@
 class Animal 
 {
     protected $name = "";
-    protected $legs = 2;
+    protected $legs = "";
     protected $cold_blooded = false;
-    protected $behaviour = "";
+    protected $behaviour = "-";
   
     public function __construct($name) 
     {
@@ -32,7 +32,7 @@ class Animal
     }
 
     public function getColdBlood(){
-      return $this->cold_blooded ? 'true' : 'false';
+      return $this->cold_blooded ? 'True' : 'False';
     }
 
     public function setBehavior($behav){ 

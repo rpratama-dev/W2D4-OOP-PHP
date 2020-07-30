@@ -5,14 +5,11 @@
         private $behav = "Auooo"; 
 
         public function __construct($name) 
-        { 
-            $this->yell($name);
+        {  
+            $this->setName($name); 
         }
 
-        public function yell($name){  
-            $this->setLegs(2); 
-            $this->setName($name); 
-            $this->setColdBlood(false); 
+        public function yell(){  
             $this->setBehavior($this->behav);   
         }
     }

@@ -3,22 +3,41 @@
   require_once "class\Ape.php";
   require_once "class\Frog.php";
 
-  $sheep = new Animal("Shaun");  
-  echo "<br>Animal Name : ". $sheep->getName();
-  echo "<br>Animal Legs : ". $sheep->getLegs();
-  echo "<br>Animal Cold Blooded ? : " . $sheep->getColdBlood();
-  echo "<br>";
+  animal();
+  ape();
+  frog();
 
-  $sungokong = new Ape("kera sakti");
-  echo "<br>Ape Name : ".  $sungokong->getName();
-  echo "<br>Ape Behavior : ". $sungokong->getBehavior(); // "Auooo"
-  echo "<br>Legs : ". $sungokong->getLegs();
-  echo "<br>Animal Cold Blooded ? : " . $sungokong->getColdBlood(); 
-  echo "<br>";
+  //release 0
+  function animal(){
+    $sheep = new Animal("Shaun");  //"shaun"
+    $sheep->setLegs(2);  //2
+    $sheep->setColdBlood(false);  //false
+    cetakOutput($sheep); 
+  }
+  
+  //release 1
+  function ape(){
+    $sungokong = new Ape("Kera Sakti"); 
+    $sungokong->setLegs(2); 
+    $sungokong->setColdBlood(false); 
+    $sungokong->yell(); 
+    cetakOutput($sungokong);
+  }
 
-  $kodok = new Frog("buduk");
-  echo "<br>Frog Name : ".  $kodok->getName();
-  echo "<br>Frog Behavior : ". $kodok->getBehavior() ; // "hop hop"
-  echo "<br>Legs : ". $kodok->getLegs();
-  echo "<br>Animal Cold Blooded ? : " . $kodok->getColdBlood() . "<br>";
+  //release 1
+  function frog(){
+    $kodok = new Frog("Buduk");
+    $kodok->setLegs(4);   
+    $kodok->setColdBlood(true); 
+    $kodok->jump(); 
+    cetakOutput($kodok); 
+  }
+
+  function cetakOutput($obj){   
+    echo "<br>Animal Name : ".  $obj->getName();
+    echo "<br>Animal Behavior : ". $obj->getBehavior();
+    echo "<br>Animal Legs : ". $obj->getLegs();
+    echo "<br>Animal Cold Blooded ? : " . $obj->getColdBlood(); 
+    echo "<br>";
+  }
 ?>

@@ -3,17 +3,14 @@
     class Frog extends Animal
     {
         //public $name = ""; 
-        private $behav = "hop hop"; 
+        private $behav = "Hop Hop"; 
 
         public function __construct($name) 
         {  
-            $this->jump($name);
+            $this->setName($name); 
         }
 
-        public function jump($name){
-            $this->setLegs(4); 
-            $this->setName($name); 
-            $this->setColdBlood(true); 
+        public function jump(){
             $this->setBehavior($this->behav);  
         }
     }
