@@ -2,7 +2,7 @@
 class Animal 
 {
     protected $name = "";
-    protected $legs = "";
+    protected $legs = 2;
     protected $cold_blooded = false;
     protected $behaviour = "-";
   

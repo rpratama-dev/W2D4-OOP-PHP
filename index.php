@@ -9,9 +9,7 @@
 
   //release 0
   function animal(){
-    $sheep = new Animal("Shaun");  //"shaun"
-    $sheep->setLegs(2);  //2
-    $sheep->setColdBlood(false);  //false
+    $sheep = new Animal("Shaun");  //"shaun"  
     cetakOutput($sheep); 
   }
   
